@@ -8,22 +8,30 @@ import org.apache.solr.client.solrj.beans.Field;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.solr.core.mapping.SolrDocument;
 
+import java.util.List;
+import java.util.Map;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@SolrDocument(collection = "employee")
-public class Employee {
+@SolrDocument(collection = "searchProduct")
+public class SearchProduct {
+
 
     @Id
     @Field
-    private int id;
+    String productId;
     @Field
-    private String name;
+    String name;
     @Field
-    private String[] address;
-
-//    @Field
-//    private String description;
-
+    String description;
+    @Field
+    List<String> productAttributes;
+    @Field
+    int productRating;
+    @Field
+    int noOfSoldUnits;
+    @Field
+    String imageUrl;
 
 }
