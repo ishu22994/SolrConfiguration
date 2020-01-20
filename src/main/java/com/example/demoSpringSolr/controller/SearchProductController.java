@@ -23,7 +23,7 @@ public class SearchProductController {
 
     //searchProducts.add(new SearchProduct(1,"Ball","Red color ball",map,30,4,3,"ishit"));
 
-    //kafka give all the jsons of whichever products have been added to search also...
+    //kafka give all the jsons of 3 products have been added to search also...
     @PostMapping(path ="/addOrUpdate",produces = {"application/json"})
     public ResponseEntity<SearchProduct> addSearchProduct(@RequestBody SearchProductDTO searchProductDTO){
 
@@ -36,12 +36,17 @@ public class SearchProductController {
 
     }
 
-    //it will give the list of JSON objects
+    /*//it will give the list of JSON objects
     @GetMapping(path ="/getAll",produces = {"application/json"})
-    public ResponseEntity<List<SearchProduct>> getAllsearchProducts() {
+    public  Iterable<SearchProduct> getAllsearchProducts() {
         Iterable<SearchProduct> searchProductList  = searchProductService.getAllsearchProducts();
-        return new ResponseEntity<List<SearchProduct>>( (List<SearchProduct>)searchProductList, HttpStatus.OK);
-    }
+       return  searchProductList;
+    }*/
 
+    @GetMapping(path ="/{data}",produces = {"application/json"})
+    public ResponseEntity<List<SearchProduct>> getAllSearchproduct(@PathVariable("data") String data) {
+        List<SearchProduct> searchProductList = searchProductService.getAllsearchProducts(data);
+        return new ResponseEntity<List<SearchProduct>>( searchProductList, HttpStatus.OK);
+    }
 
 }
