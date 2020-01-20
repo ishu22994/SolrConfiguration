@@ -12,5 +12,5 @@ public interface SearchProductRepository extends SolrCrudRepository<SearchProduc
 
 
     @Query("name:*?0* OR description:*?0* OR productAttributes:*?0*")
-    List<SearchProduct> findByName(String name);
+    List<SearchProduct> findByString(String name);
 }

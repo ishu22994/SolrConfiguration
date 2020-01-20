@@ -36,12 +36,6 @@ public class SearchProductController {
 
     }
 
-    /*//it will give the list of JSON objects
-    @GetMapping(path ="/getAll",produces = {"application/json"})
-    public  Iterable<SearchProduct> getAllsearchProducts() {
-        Iterable<SearchProduct> searchProductList  = searchProductService.getAllsearchProducts();
-       return  searchProductList;
-    }*/
 
     @GetMapping(path ="/{data}",produces = {"application/json"})
     public ResponseEntity<List<SearchProduct>> getAllSearchproduct(@PathVariable("data") String data) {
