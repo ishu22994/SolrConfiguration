@@ -16,7 +16,6 @@ import java.util.List;
 @SolrDocument(collection = "searchProduct")
 public class SearchProduct {
 
-
     @Id
     @Field
     String productId;
