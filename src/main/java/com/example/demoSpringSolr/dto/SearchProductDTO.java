@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Map;
 
 @Getter
@@ -19,6 +20,7 @@ public class SearchProductDTO {
     String name;
     String description;
     Map<String,String> productAttributes;
+  //  List<String> productAttr
     int productRating;
     int noOfSoldUnits;
     String imageUrl;

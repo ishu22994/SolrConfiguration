@@ -6,6 +6,9 @@ import com.example.demoSpringSolr.entity.SearchProduct;
 import com.example.demoSpringSolr.service.SearchProductService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.solr.client.solrj.SolrClient;
+import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.impl.HttpSolrClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,7 +16,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Slf4j
@@ -27,7 +34,7 @@ public class SearchProductController {
 
     SearchProductDTO searchProductDTO=new SearchProductDTO();
      /// TO DO :PROPERTIES CHANGE IN KAFKA FOR DOCUMENT TYPE...
-    @KafkaListener(topics="product_update",groupId="group_id")
+    @KafkaListener(topics="productUpdate",groupId="group_id")
     public void consume(String message){
         SearchProduct searchProduct=new SearchProduct();
         ObjectMapper objectMapper=new ObjectMapper();
@@ -64,9 +71,35 @@ public class SearchProductController {
 
 
     @GetMapping(path ="/{data}",produces = {"application/json"})
-    public ResponseEntity<List<SearchProduct>> getAllSearchproduct(@PathVariable("data") String data) {
+    public ResponseEntity<List<SearchProductDTO>> getAllSearchproduct(@PathVariable("data") String data) {
         List<SearchProduct> searchProductList = searchProductService.getAllsearchProducts(data);
-        return new ResponseEntity<List<SearchProduct>>( searchProductList, HttpStatus.OK);
+        List<SearchProductDTO> searchProductDTOList = new ArrayList<>();
+        for (SearchProduct searchProduct: searchProductList) {
+            SearchProductDTO searchProductDTO = new SearchProductDTO();
+            BeanUtils.copyProperties(searchProduct, searchProductDTO);
+            searchProductDTOList.add(searchProductDTO);
+        }
+
+        return new ResponseEntity<List<SearchProductDTO>>( searchProductDTOList, HttpStatus.OK);
     }
+
+    //add kafka here....
+    @GetMapping("/deleteProduct/{id}")
+    public void deleteProduct(@PathVariable("id") String id) {
+        String urlString = "http://localhost:8983/solr/searchProduct";
+        SolrClient solr = new HttpSolrClient.Builder(urlString).build();
+        try {
+            System.out.println("in delete");
+            solr.deleteById(id);
+            solr.commit();
+        } catch (SolrServerException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
 
 }
