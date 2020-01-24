@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d65cecc7-742d-4a40-8f92-2dc10ad36191" name="Default" comment="">
+    <list default="true" id="d65cecc7-742d-4a40-8f92-2dc10ad36191" name="Default" comment="Search Done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/controller/SearchProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/controller/SearchProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto/SearchProductDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto/SearchProductDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/dto/SearchProductDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/dto/SearchProductDTO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/repository/SearchProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/repository/SearchProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/service/Impl/SearchProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/service/Impl/SearchProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/controller/SearchProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/demoSpringSolr/controller/SearchProductController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,11 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchProductController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchProductController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/controller/SearchProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="87" column="42" lean-forward="true" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -34,11 +32,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DemoSpringSolrApplication.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="184">
+              <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -56,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto/SearchProductDTO.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
-              <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,13 +156,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/service/Impl/ServiceProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/service/SearchProductService.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/entity/SearchProduct.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/service/Impl/SearchProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/repository/SearchProductRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto/SearchProductDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/controller/SearchProductController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java" />
       </list>
     </option>
   </component>
@@ -417,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579787389630</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Search Done">
+      <created>1579877491542</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579877491542</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -441,18 +456,18 @@
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.43724138" />
-      <window_info anchor="bottom" id="Version Control" order="2" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.43724138" />
+      <window_info anchor="bottom" id="Version Control" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.31724137" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.7895652" visible="true" weight="0.33198708" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.78806585" visible="true" weight="0.33198708" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="2" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.5075862" />
-      <window_info id="Favorites" order="3" sideWeight="0.20970537" side_tool="true" weight="0.24959612" />
+      <window_info id="Favorites" order="3" sideWeight="0.21193415" side_tool="true" visible="true" weight="0.33198708" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
@@ -791,13 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.2.3.RELEASE/spring-messaging-5.2.3.RELEASE.jar!/org/springframework/messaging/handler/invocation/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -823,13 +831,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="97" selection-start-line="97" selection-end-line="97" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
@@ -894,7 +895,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/dto/SearchProductDTO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -921,11 +922,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/controller/SearchProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="87" column="42" lean-forward="true" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="87" column="42" selection-start-line="87" selection-start-column="42" selection-end-line="87" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/demoSpringSolr/DemoSpringSolrApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
