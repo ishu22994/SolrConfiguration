@@ -84,8 +84,8 @@ public class SearchProductController {
     }
 
     //add kafka here....
-    @GetMapping("/deleteProduct/{id}")
-    public void deleteProduct(@PathVariable("id") String id) {
+    @KafkaListener(topics="productDelete",groupId = "group_id")
+    public void deleteProduct(String id) {
         String urlString = "http://localhost:8983/solr/searchProduct";
         SolrClient solr = new HttpSolrClient.Builder(urlString).build();
         try {

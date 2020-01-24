@@ -20,7 +20,9 @@ public class SearchProductDTO {
     String name;
     String description;
     Map<String,String> productAttributes;
-  //  List<String> productAttr
+  //
+  //
+  //List<String> productAttr
     int productRating;
     int noOfSoldUnits;
     String imageUrl;
