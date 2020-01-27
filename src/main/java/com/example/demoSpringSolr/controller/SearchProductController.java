@@ -54,21 +54,6 @@ public class SearchProductController {
 
     }
 
-    //searchProducts.add(new SearchProduct(1,"Ball","Red color ball",map,30,4,3,"ishit"));
-
-    //kafka give all the jsons of 3 products have been added to search also...
-   /* @PostMapping(path ="/addOrUpdate",produces = {"application/json"})
-    public ResponseEntity<SearchProduct> addSearchProduct(@RequestBody SearchProductDTO searchProductDTO){
-
-        SearchProduct searchProduct = new SearchProduct();
-        BeanUtils.copyProperties(searchProductDTO,searchProduct);
-        List<String> productAttirbutes = searchProductDTO.getProductAttributes().entrySet().stream().map(entry -> entry.getKey() + "#" + entry.getValue()).collect(Collectors.toList());
-        searchProduct.setProductAttributes(productAttirbutes);
-        SearchProduct searchProductCreated = searchProductService.saveAll(searchProduct);
-        return new ResponseEntity<>(searchProductCreated,HttpStatus.CREATED);
-
-    } */
-
 
     @GetMapping(path ="/{data}",produces = {"application/json"})
     public ResponseEntity<List<SearchProductDTO>> getAllSearchproduct(@PathVariable("data") String data) {
@@ -85,23 +70,7 @@ public class SearchProductController {
         return new ResponseEntity<List<SearchProductDTO>>( searchProductDTOList, HttpStatus.OK);
     }
 
-    //add kafka here....
-   /* @KafkaListener(topics="productDelete",groupId = "group_id")
-    public void deleteProduct(String id) {
-        String urlString = "http://localhost:8983/solr/searchProduct";
-        SolrClient solr = new HttpSolrClient.Builder(urlString).build();
-        try {
-            System.out.println("in delete");
-            solr.deleteById(id);
-            solr.commit();
-        } catch (SolrServerException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
-*/
 
 
 }
