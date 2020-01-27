@@ -72,6 +72,8 @@ public class SearchProductController {
 
     @GetMapping(path ="/{data}",produces = {"application/json"})
     public ResponseEntity<List<SearchProductDTO>> getAllSearchproduct(@PathVariable("data") String data) {
+
+
         List<SearchProduct> searchProductList = searchProductService.getAllsearchProducts(data);
         List<SearchProductDTO> searchProductDTOList = new ArrayList<>();
         for (SearchProduct searchProduct: searchProductList) {
@@ -84,7 +86,7 @@ public class SearchProductController {
     }
 
     //add kafka here....
-    @KafkaListener(topics="productDelete",groupId = "group_id")
+   /* @KafkaListener(topics="productDelete",groupId = "group_id")
     public void deleteProduct(String id) {
         String urlString = "http://localhost:8983/solr/searchProduct";
         SolrClient solr = new HttpSolrClient.Builder(urlString).build();
@@ -99,7 +101,7 @@ public class SearchProductController {
         }
     }
 
-
+*/
 
 
 }
